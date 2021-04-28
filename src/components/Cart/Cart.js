@@ -3,7 +3,6 @@ import { Container, Button, Typography, Grid } from '@material-ui/core';
 
 import useStyles from './styles';
 
-
 const Cart = ({ cart }) => {
 
     const classes = useStyles();
@@ -22,9 +21,7 @@ const Cart = ({ cart }) => {
                 ))}
             </Grid>
             <div className={classes.cardDetails}>
-                <Typography variant='h4'>
-                    Subtotal: {cart.subtotal.formatted_with_symbol}
-                </Typography>
+                <Typography variant='h4'> Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
                 <div>
                     <Button className={classes.emptyButton} size='large' type="button" variant="contained" color='secondary'>Empty Cart</Button>
                     <Button className={classes.checkoutButton} size='large' type="button" variant="contained" color='primary'>Checkout</Button>
@@ -44,4 +41,4 @@ const Cart = ({ cart }) => {
     )
 }
 
-export default Cart
+export default Cart;
